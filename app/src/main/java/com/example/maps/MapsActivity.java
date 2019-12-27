@@ -42,17 +42,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
     }
-            @Override
-            public void onMapReady(@NonNull final MapboxMap mapboxMap) {
-                MapsActivity.this.mapboxMap = mapboxMap;
-                mapboxMap.setStyle(new Style.Builder().fromUri("mapbox://styles/andrew10000/ck4oqvpkz1b2b1cmnq64q0igx"),
-                        new Style.OnStyleLoaded() {
-                            @Override
-                            public void onStyleLoaded(@NonNull Style style) {
-                                enableLocationComponent(style);
-                            }
-                        });
-            }
+    @Override
+    public void onMapReady(@NonNull final MapboxMap mapboxMap) {
+        MapsActivity.this.mapboxMap = mapboxMap;
+        mapboxMap.setStyle(Style.TRAFFIC_DAY, new Style.OnStyleLoaded() {
+                    @Override
+                    public void onStyleLoaded(@NonNull Style style) {
+                        enableLocationComponent(style);
+                    }
+                });
+    }
     @SuppressWarnings( {"MissingPermission"})
     private void enableLocationComponent(@NonNull Style loadedMapStyle) {
 // Check if permissions are enabled and if not request
