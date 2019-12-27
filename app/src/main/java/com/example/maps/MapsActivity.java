@@ -5,10 +5,13 @@ import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
 
 import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.annotations.MarkerOptions;
+import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.maps.Style;
+import com.mapbox.mapboxsdk.style.layers.Layer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,10 +29,19 @@ public class MapsActivity extends AppCompatActivity {
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(new OnMapReadyCallback() {
             @Override
-            public void onMapReady(@NonNull MapboxMap mapboxMap) {
-              mapboxMap.setStyle(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
+            public void onMapReady(@NonNull final MapboxMap mapboxMap) {
+              mapboxMap.setStyle(Style.TRAFFIC_DAY, new Style.OnStyleLoaded() {
                   @Override
                   public void onStyleLoaded(@NonNull Style style) {
+
+
+
+                      mapboxMap.addMarker(new MarkerOptions()
+                            .position(new LatLng(-1.252908, 36.947694))
+
+                            .title("This is Home!")
+                            .snippet("Welcome, hope to see you soon")
+                      );
 
                   }
               });
