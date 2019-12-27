@@ -6,9 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.mapbox.android.core.permissions.PermissionsListener;
+import com.mapbox.android.core.permissions.PermissionsManager;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
 import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.mapbox.mapboxsdk.location.LocationComponent;
+import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions;
+import com.mapbox.mapboxsdk.location.modes.CameraMode;
+import com.mapbox.mapboxsdk.location.modes.RenderMode;
 import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
@@ -17,8 +23,13 @@ import com.mapbox.mapboxsdk.style.layers.Layer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-public class MapsActivity extends AppCompatActivity {
 
+import java.util.List;
+
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback, PermissionsListener {
+
+    private PermissionsManager permissionsManager;
+    private MapboxMap mapboxMap;
     private MapView mapView;
 
     @Override
@@ -29,28 +40,70 @@ public class MapsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_maps);
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(new OnMapReadyCallback() {
+        mapView.getMapAsync(this);
+    }
             @Override
             public void onMapReady(@NonNull final MapboxMap mapboxMap) {
-              mapboxMap.setStyle(Style.TRAFFIC_DAY, new Style.OnStyleLoaded() {
-                  @Override
-                  public void onStyleLoaded(@NonNull Style style) {
-
-
-
-                      mapboxMap.addMarker(new MarkerOptions()
-                            .position(new LatLng(-1.252908, 36.947694))
-
-                            .title("This is Home!")
-                            .snippet("Welcome, hope to see you soon")
-                      );
-
-                  }
-              });
+                MapsActivity.this.mapboxMap = mapboxMap;
+                mapboxMap.setStyle(new Style.Builder().fromUri("mapbox://styles/andrew10000/ck4oqvpkz1b2b1cmnq64q0igx"),
+                        new Style.OnStyleLoaded() {
+                            @Override
+                            public void onStyleLoaded(@NonNull Style style) {
+                                enableLocationComponent(style);
+                            }
+                        });
             }
-        });
+    @SuppressWarnings( {"MissingPermission"})
+    private void enableLocationComponent(@NonNull Style loadedMapStyle) {
+// Check if permissions are enabled and if not request
+        if (PermissionsManager.areLocationPermissionsGranted(this)) {
 
+// Get an instance of the component
+            LocationComponent locationComponent = mapboxMap.getLocationComponent();
+
+// Activate with options
+            locationComponent.activateLocationComponent(
+                    LocationComponentActivationOptions.builder(this, loadedMapStyle).build());
+
+// Enable to make component visible
+            locationComponent.setLocationComponentEnabled(true);
+
+// Set the component's camera mode
+            locationComponent.setCameraMode(CameraMode.TRACKING);
+
+// Set the component's render mode
+            locationComponent.setRenderMode(RenderMode.COMPASS);
+        } else {
+            permissionsManager = new PermissionsManager(this);
+            permissionsManager.requestLocationPermissions(this);
+        }
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        permissionsManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    @Override
+    public void onExplanationNeeded(List<String> permissionsToExplain) {
+        Toast.makeText(this, R.string.user_location_permission_explanation, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onPermissionResult(boolean granted) {
+        if (granted) {
+            mapboxMap.getStyle(new Style.OnStyleLoaded() {
+                @Override
+                public void onStyleLoaded(@NonNull Style style) {
+                    enableLocationComponent(style);
+                }
+            });
+        } else {
+            Toast.makeText(this, R.string.user_location_permission_not_granted, Toast.LENGTH_LONG).show();
+            finish();
+        }
+    }
+
     @Override
     public void onStart() {
         super.onStart();
