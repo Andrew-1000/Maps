@@ -22,6 +22,11 @@
         android:name="com.example.maps.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_traffic"
+        android:label="menu_traffic"
+        tools:layout="@layout/fragment_traffic"/>
+
 
     <fragment
         android:id="@+id/nav_tools"
