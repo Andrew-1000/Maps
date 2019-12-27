@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Maps</string>
-    <string name="title_activity_maps">This is Home</string>
+    <string name="app">Mandy</string>
+    <string name="title_activity_maps">Mandy Maps</string>
     <string name="mapbox_access_token">pk.eyJ1IjoiYW5kcmV3MTAwMDAiLCJhIjoiY2s0MHl2NjlsMDZmMjNscGY4OGJ2cWMxayJ9.az_HB4TQxDoywQMl05gisA</string>
 
 </resources>
