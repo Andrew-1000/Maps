@@ -2,7 +2,9 @@ package com.example.maps;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
@@ -74,6 +76,18 @@ public class MapsActivity extends AppCompatActivity {
     public void onDestroy(){
         super.onDestroy();
         mapView.onDestroy();
+    }
+    @Override
+    public void onBackPressed(){
+        backPressed();
+        Toast.makeText(this,"Back key pressed", Toast.LENGTH_LONG).show();
+    }
+
+    private void backPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
     }
 
     @Override
