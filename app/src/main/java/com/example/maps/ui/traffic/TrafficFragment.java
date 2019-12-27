@@ -13,6 +13,8 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.maps.R;
+import com.example.maps.ui.tools.ToolsViewModel;
+import com.mapbox.mapboxsdk.maps.MapView;
 
 public class TrafficFragment extends Fragment {
     private TrafficViewModel trafficViewModel;
@@ -22,7 +24,6 @@ public class TrafficFragment extends Fragment {
         trafficViewModel = ViewModelProviders.of(this).get(TrafficViewModel.class);
         View root = inflater.inflate(R.layout.fragment_traffic, container, false);
         final TextView textView = root.findViewById(R.id.text_traffic);
-
         trafficViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {

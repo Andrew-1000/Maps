@@ -21,7 +21,7 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/menu_tools" />
         <item
-            android:id="@+id/traffic"
+            android:id="@+id/nav_traffic"
             android:icon="@drawable/ic_traffic_black_24dp"
             android:title="@string/traffic_status"/>
     </group>
