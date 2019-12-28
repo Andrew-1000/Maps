@@ -21,6 +21,7 @@
     <string name="traffic_status">Traffic Status</string>
     <string name="user_location_permission_explanation">This is your location</string>
     <string name="user_location_permission_not_granted">Permission not granted to access location</string>
-    <string name="this_is_the_first_card">This is the first Card</string>
+    <string name="this_is_the_first_card">Nairobi</string>
+    <string name="monday_12_30pm_mostly_cloudy">Monday, 12:30PM, Mostly Cloudy</string>
 
 </resources>
