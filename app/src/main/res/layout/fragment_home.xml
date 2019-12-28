@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="9dp"
     android:orientation="vertical">
     <TextView
         android:id="@+id/text_home"
@@ -18,10 +18,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/mtrli_card_spacing"
+        android:layout_marginRight="@dimen/mtrli_card_spacing">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,75 +33,73 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mtrl_card_spacing"
-                android:layout_marginTop="@dimen/mtrl_card_spacing"
-                android:layout_marginRight="@dimen/mtrl_card_spacing"
+                android:layout_marginLeft="@dimen/mtrli_card_spacing"
+                android:layout_marginTop="@dimen/card_spacing_top"
+                android:layout_marginRight="@dimen/mtrli_card_spacing"
                 android:minHeight="@dimen/cat_card_demo_min_height">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cat_card_elevation_desc"/>
+                    android:text="@string/cat_card_elevation_desc" />
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mtrl_card_spacing"
-                android:layout_marginTop="@dimen/mtrl_card_spacing"
-                android:layout_marginRight="@dimen/mtrl_card_spacing"
+                android:layout_marginLeft="@dimen/mtrli_card_spacing"
+                android:layout_marginTop="@dimen/card_spacing_top"
+                android:layout_marginRight="@dimen/mtrli_card_spacing"
                 android:minHeight="@dimen/cat_card_demo_min_height">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cat_card_spacing_desc"/>
+                    android:text="@string/cat_card_spacing_desc" />
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mtrl_card_spacing"
-                android:layout_marginTop="@dimen/mtrl_card_spacing"
-                android:layout_marginRight="@dimen/mtrl_card_spacing"
-                android:minHeight="@dimen/cat_card_demo_min_height"
-                android:clickable="true">
+                android:layout_marginLeft="@dimen/mtrli_card_spacing"
+                android:layout_marginTop="@dimen/card_spacing_top"
+                android:layout_marginRight="@dimen/mtrli_card_spacing"
+                android:clickable="true"
+                android:minHeight="@dimen/cat_card_demo_min_height">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cat_card_clickable_desc"/>
+                    android:text="@string/cat_card_clickable_desc" />
             </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="@string/cat_card_m1_section_title"
-                android:textAppearance="?attr/textAppearanceSubtitle1"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mtrl_card_spacing"
-                android:layout_marginTop="@dimen/mtrl_card_spacing"
-                android:layout_marginRight="@dimen/mtrl_card_spacing"
+                android:layout_marginLeft="@dimen/mtrli_card_spacing"
+                android:layout_marginTop="@dimen/card_spacing_top"
+                android:layout_marginRight="@dimen/mtrli_card_spacing"
                 android:minHeight="@dimen/cat_card_demo_min_height">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cat_card_m1_desc"/>
+                    android:text="@string/cat_card_m1_desc" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 style="@style/Widget.MaterialComponents.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mtrl_card_spacing"
-                android:layout_marginTop="@dimen/mtrl_card_spacing"
-                android:layout_marginRight="@dimen/mtrl_card_spacing"
+                android:layout_marginLeft="@dimen/mtrli_card_spacing"
+                android:layout_marginTop="@dimen/card_spacing_top"
+                android:layout_marginRight="@dimen/mtrli_card_spacing"
                 android:minHeight="@dimen/cat_card_demo_min_height">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cat_card_style_only_desc"/>
+                    android:text="@string/cat_card_style_only_desc" />
             </androidx.cardview.widget.CardView>
 
             <!-- Guarantee space for the shadow on the last card. Depending on non-demo (real-world) uses
@@ -106,7 +107,7 @@
                 demo only. -->
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/mtrl_card_spacing"/>
+                android:layout_height="@dimen/mtrl_card_spacing" />
 
         </LinearLayout>
     </ScrollView>
