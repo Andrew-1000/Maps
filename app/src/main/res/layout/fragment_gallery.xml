@@ -28,7 +28,7 @@
             android:id="@+id/card_content_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="1dp"
             android:minHeight="200dp">
 
             <TextView

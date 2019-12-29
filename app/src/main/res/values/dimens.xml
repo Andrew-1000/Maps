@@ -17,5 +17,6 @@
     <dimen name="cat_card_triple_spacing">24dp</dimen>
     <dimen name="mtrli_card_spacing">1dp</dimen>
     <dimen name="card_spacing_top">8dp</dimen>
+    <dimen name="card_image">75dp</dimen>
 
 </resources>

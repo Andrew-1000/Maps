@@ -68,7 +68,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             locationComponent.setLocationComponentEnabled(true);
 
             // Set the component's camera mode
-            locationComponent.setCameraMode(CameraMode.TRACKING);
+            locationComponent.setCameraMode(CameraMode.TRACKING_GPS_NORTH);
 
             // Set the component's render mode
             locationComponent.setRenderMode(RenderMode.COMPASS);

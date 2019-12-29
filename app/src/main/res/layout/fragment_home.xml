@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="9dp"
+    android:padding="10dp"
     android:orientation="vertical">
     <TextView
         android:id="@+id/text_home"
@@ -36,26 +36,48 @@
                 android:layout_marginLeft="@dimen/mtrli_card_spacing"
                 android:layout_marginTop="@dimen/card_spacing_top"
                 android:layout_marginRight="@dimen/mtrli_card_spacing"
+                android:clickable="true"
                 android:minHeight="@dimen/cat_card_demo_min_height">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cat_card_elevation_desc" />
-            </com.google.android.material.card.MaterialCardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mtrli_card_spacing"
-                android:layout_marginTop="@dimen/card_spacing_top"
-                android:layout_marginRight="@dimen/mtrli_card_spacing"
-                android:minHeight="@dimen/cat_card_demo_min_height">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cat_card_elevation_desc"
+                        android:textSize="20sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cat_card_spacing_desc" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="214dp"
+                        android:src="@drawable/ic_icon_imgee">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
@@ -67,40 +89,196 @@
                 android:clickable="true"
                 android:minHeight="@dimen/cat_card_demo_min_height">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cat_card_clickable_desc" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cat_card_elevation_desc"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="214dp"
+                        android:src="@drawable/ic_icon_imgee">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                </LinearLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/mtrli_card_spacing"
                 android:layout_marginTop="@dimen/card_spacing_top"
                 android:layout_marginRight="@dimen/mtrli_card_spacing"
+                android:clickable="true"
                 android:minHeight="@dimen/cat_card_demo_min_height">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cat_card_m1_desc" />
-            </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                style="@style/Widget.MaterialComponents.CardView"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cat_card_elevation_desc"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="214dp"
+                        android:src="@drawable/ic_icon_imgee">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/mtrli_card_spacing"
                 android:layout_marginTop="@dimen/card_spacing_top"
                 android:layout_marginRight="@dimen/mtrli_card_spacing"
+                android:clickable="true"
                 android:minHeight="@dimen/cat_card_demo_min_height">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cat_card_style_only_desc" />
-            </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cat_card_elevation_desc"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="214dp"
+                        android:src="@drawable/ic_icon_imgee">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mtrli_card_spacing"
+                android:layout_marginTop="@dimen/card_spacing_top"
+                android:layout_marginRight="@dimen/mtrli_card_spacing"
+                android:clickable="true"
+                android:minHeight="@dimen/cat_card_demo_min_height">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cat_card_elevation_desc"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="214dp"
+                        android:src="@drawable/ic_icon_imgee">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Subtext Comes here">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- Guarantee space for the shadow on the last card. Depending on non-demo (real-world) uses
                 of CardView, this may not be necessary. This quick-fix is for purposes of this simple

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
-<LinearLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:padding="16dp"
-android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:orientation="vertical">
     <TextView
         android:id="@+id/text_traffic"
         android:layout_width="match_parent"
@@ -27,16 +26,16 @@ android:orientation="vertical">
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="0.4"
-    android:layout_margin="16dp"
+    android:layout_margin="10dp"
     android:clickable="true"
     android:focusable="true"
-    app:contentPadding="16dp">
+    app:contentPadding="10dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/cat_card_states_card_content"
+        android:text="@string/route_to_home"
         android:textAppearance="?attr/textAppearanceBody1"/>
 </com.google.android.material.card.MaterialCardView>
 
@@ -45,25 +44,27 @@ android:orientation="vertical">
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="0.4"
-    android:layout_margin="16dp"
+    android:layout_margin="10dp"
     android:checkable="true"
     android:clickable="true"
     android:focusable="true"
-    app:contentPadding="8dp">
+    app:contentPadding="10dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/cat_card_checkable_card"
+        android:text="@string/traffic_within_location"
         android:textAppearance="?attr/textAppearanceBody1"/>
 
 </com.google.android.material.card.MaterialCardView>
 
 <TextView
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
+    android:textAlignment="center"
+    android:textSize="15sp"
     android:layout_marginBottom="8dp"
     android:text="@string/cat_card_select"
     android:textAppearance="?attr/textAppearanceBody1"/>
@@ -81,19 +82,14 @@ android:orientation="vertical">
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/cat_card_state_pressed"/>
+        android:text="@string/satellite"/>
     <RadioButton
         android:id="@+id/hovered"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/cat_card_state_hovered"/>
-    <RadioButton
-        android:id="@+id/none"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/cat_card_state_none"/>
+        android:text="@string/street_view"/>
+
 
 </RadioGroup>
 

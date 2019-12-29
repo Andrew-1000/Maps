@@ -35,11 +35,11 @@
     <string name="cat_card_states">Card States</string>
     <string name="cat_card_list" translatable="false">Card List With Drag-and-Drop</string>
     <string name="cat_card_draggable_card_content">This is a draggable Card.</string>
-    <string name="cat_card_states_card_content">This demo shows the different states on a card.</string>
-    <string name="cat_card_state_hovered">Hovered</string>
-    <string name="cat_card_state_pressed">Pressed</string>
+    <string name="route_to_home">Traffic Update on your Route to Home</string>
+    <string name="satellite">Satellite</string>
+    <string name="street_view">Street View</string>
     <string name="cat_card_state_none">None</string>
-    <string name="cat_card_checkable_card">This is a checkable Card</string>
+    <string name="traffic_within_location">Traffic Update within your Location</string>
     <string name="cat_card_m1_section_title">Material 1 CardView</string>
     <string name="cat_card_description">
     Cards represent entry points into deeper levels of detail or navigation, such as an album in
@@ -64,7 +64,7 @@
     use MaterialCardView in your layout, or apply a style tag to a CardView. We recommend using
     the MaterialCardView class for the latest Material designs and maximum flexibility in your UI.
   </string>
-    <string name="cat_card_select">Select a state</string>
+    <string name="cat_card_select">Select Map Style</string>
     <string name="cat_card_selectable_content">
     Lorem ipsum dolor sit amet, nec no nominavi scaevola. Per et sint sapientem, nobis perpetua salutandi mei te. Quo tamquam probatus reprehendunt in. Eos esse purto eruditi ea. Enim tation persius ut sea, eos ad consul populo.
     Ne eum solet altera. Cibo eligendi et est, electram theophrastus te vel eu.
@@ -116,6 +116,7 @@
     <string description="A label in a button to dismiss the last action [CHAR LIMIT=30]"
         name="cat_card_swipe_to_dismiss">Swipe this card to dismiss it</string>
     <string name="cat_card_swipe_dismiss" description="the title of a screen where you can swipe to dismiss a card [CHAR LIMIT=20]">Card Swipe Dismiss</string>
+    <string name="demo_card_text">My Sample Card</string>
 
 
 </resources>
