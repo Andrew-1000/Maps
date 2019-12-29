@@ -10,7 +10,7 @@ public class TrafficViewModel extends ViewModel {
 
     public TrafficViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Traffic fragment");
+        mText.setValue("Traffic Updates");
     }
 
     public LiveData<String> getText() {
