@@ -17,9 +17,11 @@
         mapbox:layout_constraintLeft_toLeftOf="parent"
         mapbox:layout_constraintRight_toRightOf="parent"
         mapbox:layout_constraintTop_toTopOf="parent"
-        mapbox:mapbox_cameraTargetLat="-1.252908"
-        mapbox:mapbox_cameraTargetLng="36.947694"
-        mapbox:mapbox_cameraZoom="15.526846" />
+        mapbox:mapbox_cameraTargetLat="-1.2921"
+        mapbox:mapbox_cameraTargetLng="36.8219"
+        mapbox:mapbox_cameraBearing="34.33"
+        mapbox:mapbox_cameraTilt="45.25"
+        mapbox:mapbox_cameraZoom="13.526846" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/traffic_toggle_fab"

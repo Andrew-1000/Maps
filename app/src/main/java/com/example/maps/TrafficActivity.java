@@ -37,7 +37,7 @@ public class TrafficActivity extends AppCompatActivity {
             @Override
             public void onMapReady(final MapboxMap mapboxMap) {
                 map = mapboxMap;
-                mapboxMap.setStyle(Style.SATELLITE_STREETS, new Style.OnStyleLoaded() {
+                mapboxMap.setStyle(Style.MAPBOX_STREETS, new Style.OnStyleLoaded() {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
                         trafficPlugin = new TrafficPlugin(mapView, mapboxMap, style);
