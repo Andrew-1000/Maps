@@ -3,6 +3,7 @@
     <string name="app">Mandy</string>
     <string name="title_activity_maps">Mandy Maps</string>
     <string name="mapbox_access_token">pk.eyJ1IjoiYW5kcmV3MTAwMDAiLCJhIjoiY2s0MHl2NjlsMDZmMjNscGY4OGJ2cWMxayJ9.az_HB4TQxDoywQMl05gisA</string>
+    <string name="token">pk.eyJ1IjoiYW5kcmV3MTAwMDAiLCJhIjoiY2s0dWY0YW9nMGM3MTNlbjFidGM1MHB1ZCJ9.kpB8_TGmdCqQkUkHEVl-DA</string>
     <string name="title_activity_main">Mandy</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -64,7 +65,7 @@
     use MaterialCardView in your layout, or apply a style tag to a CardView. We recommend using
     the MaterialCardView class for the latest Material designs and maximum flexibility in your UI.
   </string>
-    <string name="cat_card_select">Select Map Style</string>
+    <string name="cat_card_select">View Traffic Update</string>
     <string name="cat_card_selectable_content">
     Lorem ipsum dolor sit amet, nec no nominavi scaevola. Per et sint sapientem, nobis perpetua salutandi mei te. Quo tamquam probatus reprehendunt in. Eos esse purto eruditi ea. Enim tation persius ut sea, eos ad consul populo.
     Ne eum solet altera. Cibo eligendi et est, electram theophrastus te vel eu.
@@ -117,6 +118,10 @@
         name="cat_card_swipe_to_dismiss">Swipe this card to dismiss it</string>
     <string name="cat_card_swipe_dismiss" description="the title of a screen where you can swipe to dismiss a card [CHAR LIMIT=20]">Card Swipe Dismiss</string>
     <string name="demo_card_text">My Sample Card</string>
+    <string name="traffic">View Traffic</string>
+    <string name="viewmap">View Map</string>
+    <string name="subtext_comes_here">Subtext Comes here</string>
+    <string name="an_image">An Image</string>
 
 
 </resources>
